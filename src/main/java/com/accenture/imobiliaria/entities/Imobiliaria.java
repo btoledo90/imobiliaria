@@ -5,8 +5,10 @@ import lombok.*;
 import javax.persistence.*;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Table(name = "tb_mensagem")
+@Table(name = "tb_imobiliaria")
 public class Imobiliaria {
 
     @Id
