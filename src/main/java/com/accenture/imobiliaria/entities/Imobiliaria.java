@@ -1,6 +1,7 @@
 package com.accenture.imobiliaria.entities;
 
 import lombok.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 
@@ -18,5 +19,6 @@ public class Imobiliaria {
     @NonNull
     @Column(length = 100)
     private String mensagem;
+
 
 }

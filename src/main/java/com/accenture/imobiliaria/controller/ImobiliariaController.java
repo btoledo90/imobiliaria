@@ -1,5 +1,6 @@
 package com.accenture.imobiliaria.controller;
 
+import antlr.StringUtils;
 import com.accenture.imobiliaria.dto.ImobiliariaDTO;
 import com.accenture.imobiliaria.entities.Imobiliaria;
 import com.accenture.imobiliaria.services.ImobiliariaService;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.io.File;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,23 +24,17 @@ public class ImobiliariaController {
     private ImobiliariaService imobiliariaService;
 
     @PostMapping
-    //@Consumes(MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<ImobiliariaDTO> insert(
 
             @RequestParam("msgTexto") String mensagem,
-            @RequestParam("imagem") MultipartFile multipartFile) {
-            ImobiliariaDTO dto = new ImobiliariaDTO(null, mensagem);
-            dto = imobiliariaService.service(dto);
-            return ResponseEntity.ok(dto);
+            @RequestParam("imagem") MultipartFile foto) {
+        ImobiliariaDTO dto = new ImobiliariaDTO(null, mensagem, foto);
+        dto = imobiliariaService.service(dto);
+        
+
+        return ResponseEntity.ok(dto);
     }
 
-//    @PostMapping
-//    public ResponseEntity<ImobiliariaDTO> insert(@RequestBody ImobiliariaDTO dto) {
-//        dto = service.insert(dto);
-//        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
-//                .buildAndExpand(dto.getId()).toUri();
-//        return ResponseEntity.created(uri).body(dto);
-//    }
 
 }
 
