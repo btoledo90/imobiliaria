@@ -1,7 +1,6 @@
-package com.accenture.imobiliaria.entities;
+package com.accenture.imobiliaria.vistoria.entities;
 
 import lombok.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 

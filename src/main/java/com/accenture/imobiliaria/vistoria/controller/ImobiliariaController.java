@@ -1,20 +1,11 @@
-package com.accenture.imobiliaria.controller;
+package com.accenture.imobiliaria.vistoria.controller;
 
-import antlr.StringUtils;
-import com.accenture.imobiliaria.dto.ImobiliariaDTO;
-import com.accenture.imobiliaria.entities.Imobiliaria;
-import com.accenture.imobiliaria.services.ImobiliariaService;
+import com.accenture.imobiliaria.vistoria.dto.ImobiliariaDTO;
+import com.accenture.imobiliaria.vistoria.services.ImobiliariaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
-import java.io.File;
-import java.net.URI;
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @RequestMapping(value = "/mensagens")
