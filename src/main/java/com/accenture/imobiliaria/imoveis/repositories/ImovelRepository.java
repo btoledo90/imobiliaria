@@ -1,4 +1,9 @@
 package com.accenture.imobiliaria.imoveis.repositories;
 
-public class ImovelRepository {
+import com.accenture.imobiliaria.imoveis.entities.Imovel;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ImovelRepository extends JpaRepository<Imovel, Long> {
 }

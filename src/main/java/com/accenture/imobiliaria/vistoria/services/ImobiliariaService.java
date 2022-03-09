@@ -2,7 +2,8 @@ package com.accenture.imobiliaria.vistoria.services;
 
 import com.accenture.imobiliaria.vistoria.dto.ImobiliariaDTO;
 import com.accenture.imobiliaria.vistoria.entities.Imobiliaria;
-import com.accenture.imobiliaria.vistoria.controller.repositories.ImobiliariaRepository;
+
+import com.accenture.imobiliaria.vistoria.repositories.ImobiliariaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
