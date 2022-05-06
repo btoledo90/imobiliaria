@@ -55,11 +55,7 @@ public class ImovelController {
         return "resultado-inscricao";
     }
 
-    @GetMapping(path = "/formulario")
-    public String inscricao() {
-        return "formulario";
-    }
-
+    
 
 
     @PutMapping
