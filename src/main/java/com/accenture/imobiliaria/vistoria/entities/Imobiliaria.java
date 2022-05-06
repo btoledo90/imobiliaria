@@ -1,5 +1,6 @@
 package com.accenture.imobiliaria.vistoria.entities;
 
+import com.sun.istack.NotNull;
 import lombok.*;
 
 import javax.persistence.*;
@@ -18,6 +19,8 @@ public class Imobiliaria {
     @NonNull
     @Column(length = 100)
     private String mensagem;
+    @NotNull
+    private Long idImovel;
 
 
 }

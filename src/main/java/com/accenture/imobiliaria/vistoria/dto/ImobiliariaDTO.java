@@ -15,6 +15,7 @@ public class ImobiliariaDTO {
     private String mensagem;
     @JsonIgnore
     private MultipartFile foto;
+    private Long idImovel;
 
 
 }

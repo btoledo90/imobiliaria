@@ -22,8 +22,8 @@ public class ImobiliariaService {
     public ImobiliariaDTO service(ImobiliariaDTO dto)  {
         Imobiliaria entity = new Imobiliaria();
         entity.setMensagem(dto.getMensagem());
+        entity.setIdImovel(dto.getIdImovel());
         entity = imobiliariaRepository.save(entity);
-        dto.setId(entity.getId());
         salvarImagem(dto.getFoto(), dto.getId());
         return dto;
     }

@@ -14,12 +14,15 @@ public class ImobiliariaController {
     @Autowired
     private ImobiliariaService imobiliariaService;
 
+
+
     @PostMapping
     public ResponseEntity<ImobiliariaDTO> insert(
 
             @RequestParam("msgTexto") String mensagem,
-            @RequestParam("imagem") MultipartFile foto) {
-        ImobiliariaDTO dto = new ImobiliariaDTO(null, mensagem, foto);
+            @RequestParam("imagem") MultipartFile foto,
+            @RequestParam("idImovel") Long idImovel ){
+        ImobiliariaDTO dto = new ImobiliariaDTO(null, mensagem, foto, idImovel);
         dto = imobiliariaService.service(dto);
         
 
