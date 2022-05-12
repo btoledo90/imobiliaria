@@ -1,0 +1,75 @@
+openapi: '3.0.1'
+
+info:
+  title: "Imobiliaria API"
+  version: '1.0.0'
+
+paths:
+  /v1/imovel:
+    post:
+      summary: "Adiciona um novo imovel no sistema."
+      description: "Adiciona um novo imovel no sistema."
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Imovel"
+      responses:
+        "201":
+          description: "Inclusao do imovel foi feita com sucesso."
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Imovel"
+        "400":
+          description: "Bad request."
+        "401":
+          description: "Unauthorized."
+        "403":
+          description: "Forbidden."
+        "500":
+          description: "Internal server error."
+
+components:
+  schemas:
+    Version:
+      type: "object"
+      properties:
+        number:
+          type: "string"
+    Imovel:
+      type: "object"
+      required:
+        - "id"
+        - "apelido"
+        - "endereco"
+        - "numero"
+        - "complemento"
+        - "bairro"
+        - "cidade"
+        - "estado"
+        - "cep"
+        - "situacao"
+      properties:
+        id:
+          type: "string"
+          example: "1"
+        apelido:
+          type: "string"
+        endereco:
+          type: "string"
+        numero:
+          type: "string"
+        complemento:
+          type: "string"
+        bairro:
+          type: "string"
+        cidade:
+          type: "string"
+        estado:
+          type: "string"
+        cep:
+          type: "string"
+        situacao:
+          type: "string"
