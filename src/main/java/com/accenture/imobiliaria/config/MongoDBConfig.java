@@ -8,10 +8,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.core.MongoTemplate;
 
-@Configuration
+//@Configuration
 public class MongoDBConfig {
 
-  @Bean
+  //@Bean
   public MongoClient mongo() {
     ConnectionString connectionString = new ConnectionString("mongodb://localhost:27017/test");
     MongoClientSettings mongoClientSettings = MongoClientSettings.builder()
@@ -21,7 +21,7 @@ public class MongoDBConfig {
     return MongoClients.create(mongoClientSettings);
   }
 
-  @Bean
+  //@Bean
   public MongoTemplate mongoTemplate() throws Exception {
     return new MongoTemplate(mongo(), "test");
   }
